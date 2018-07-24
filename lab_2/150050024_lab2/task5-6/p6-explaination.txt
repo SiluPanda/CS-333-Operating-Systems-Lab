@@ -1,0 +1,20 @@
+I printed the required message for both parent and child and made parent process sleep for 60s.
+Then child process waits for a integer user input. Meanwhile in a terminal I ran the ps -o pid,stat −−pid <child’s PID> command
+to check the status of the command.
+
+The status were of two kinds,
+
+1. PID STATS
+	3020 S+
+
+2. PID STATS
+	3020 Z+
+
+
+where,
+
+ S : Interruptible sleep (waiting for an event to complete)
+ Z : Defunct ("zombie") process, terminated but not reaped by its
+            parent.
+
+ + : is in the foreground process group
