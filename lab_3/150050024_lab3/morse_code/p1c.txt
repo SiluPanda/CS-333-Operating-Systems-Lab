@@ -1,0 +1,7 @@
+When the sleep time for child process is greater than grand child,
+the grand child process exits first, followed by the child process.
+
+But, when the sleep time for grand child is more than that if child
+process, the child process exits first making the grand child process
+an orphan process when then gets adopted by the main process.
+

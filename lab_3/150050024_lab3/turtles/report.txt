@@ -1,0 +1,1 @@
+I used execvp function to run and simple validator for giving errors.
