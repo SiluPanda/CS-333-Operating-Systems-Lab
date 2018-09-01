@@ -1,0 +1,6 @@
+1.
+	3177 r->next = kmem.freelist;
+	3178 kmem.freelist = r;
+
+	The free memory block is put at the head of the free pages list and the root pointer is changed to point to this new head.
+
