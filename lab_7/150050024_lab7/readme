@@ -1,0 +1,15 @@
+Part 0:
+
+i. for obtaining lock : aquire
+for releasing lock : release
+
+ii. It checks whether the CPU is holding the lock.
+
+iii. acquire(&ptable.lock);` in the `proc.c` file just before or after line 40(`acquire(&ptable.lock);`). since same CPU is trying to aquire the same lock without releasing it first and it will cause panic
+
+
+iv.
+
+ v. sti() enables interrupts so if there is an interrupt which also uses the same lock which was just locked using acquire it will lead to a kernel panic.
+
+If the same thing happends during boot time, xv6 goes into an infinite loop.
